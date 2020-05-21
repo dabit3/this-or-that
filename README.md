@@ -11,15 +11,24 @@ You can deploy this app and the back end infrastructure in one of two ways:
 
 ### Amplify CLI
 
-1. Clone the repo, install dependencies
+1. First install and configure the Amplify CLI.
+
+> For a complete walkthrough of how to configure the CLI, see [this video](https://www.youtube.com/watch?v=fWbM5DLh25U)
+
+```sh
+$ npm install -g @aws-amplify/cli
+$ amplify configure
+```
+
+2. Clone the repo, install dependencies
 
 ```sh
 $ git clone https://github.com/dabit3/this-or-that.git
 $ cd this-or-that
-$ yarn
+$ npm install
 ```
 
-2. Initialize the app
+3. Initialize the app
 
 ```sh
 $ amplify init
@@ -32,13 +41,17 @@ $ amplify init
 ? Do you want to configure Lambda Triggers for Cognito? No
 ```
 
-3. Deploy the back end
+4. Deploy the back end
 
 ```sh
 $ amplify push --y
 ```
 
-4. If using the built in auth mode (IAM), update the [IAM role](#iam-authorization)
+5. Run the app
+
+```sh
+$ npm start
+```
 
 ### One click deploy
 
