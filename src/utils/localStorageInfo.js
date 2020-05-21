@@ -8,7 +8,6 @@ export const STORAGE_KEY = "THIS_OR_THAT_2020";
 export function setVoteForPoll(pollId, candidateId) {
   let limitReached = false;
   let voteData = localStorage.getItem(STORAGE_KEY);
-  console.log('voteData:', voteData)
   voteData = JSON.parse(voteData);
   if (!voteData) {
     const voteData = {
