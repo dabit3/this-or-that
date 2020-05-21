@@ -4,6 +4,13 @@ Scalable serverless voting app - built with AWS Amplify, AWS AppSync, and Amazon
 
 ## To deploy
 
+You can deploy this app and the back end infrastructure in one of two ways:
+
+1. The Amplify CLI
+2. One click deploy button
+
+### Amplify CLI
+
 1. Clone the repo, install dependencies
 
 ```sh
@@ -61,6 +68,11 @@ __Response mapping template__
 $util.quiet($ctx.result.put("clientId", "$context.arguments.clientId"))
 $util.toJson($ctx.result)
 ```
+
+### One click deploy
+
+[![amplifybutton](https://oneclick.amplifyapp.com/button.svg)](https://console.aws.amazon.com/amplify/home#/deploy?repo=https://github.com/dabit3/this-or-that)
+
 
 ## IAM Authorization
 
