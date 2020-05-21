@@ -23,6 +23,12 @@ $ yarn
 
 ```sh
 $ amplify init
+
+? Do you want to use an existing environment? N
+? Enter a name for the environment: dev (or your preferred env name)
+? Choose your default editor: your-preferred-editor
+? Do you want to use an AWS profile? Yes
+? Please choose the profile you want to use: your-profile-name
 ```
 
 3. Deploy the back end
