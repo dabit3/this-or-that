@@ -92,19 +92,3 @@ __Response mapping template__
 $util.quiet($ctx.result.put("clientId", "$context.arguments.clientId"))
 $util.toJson($ctx.result)
 ```
-
-## IAM Authorization
-
-As is the way this is set up, the authorization mode is __IAM__ which means that when sending a request the headers need to be signed by the Amplify GraphQL Client using the Amplify credentials in order for the API to accept the request.
-
-> You can also opt for API Key which is less restrictive and only requires that the `x-api-key` header be sent with each request. To do so, run `amplify update api` and set the default authorization mode to `API key`.
-
-To use IAM authorization, there needs to be one addition to the Cognito Identity pool `UnauthRole`. It needs to have permission to invoke the `upVote` mutation.
-
-> If you choose to use API Key for authorization, this step is not needed.
-
-```
- "arn:aws:appsync:us-east-1:<your_account_id>:apis/<your_app_id>/types/Mutation/fields/upVote",
- ```
-
- To edit and view this role, open the IAM Console in AWS and search for your app name, then choose the one that is the `unauthRole`.
