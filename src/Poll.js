@@ -3,9 +3,9 @@ import { useParams, useHistory } from "react-router-dom";
 import API from '@aws-amplify/api';
 import Storage from '@aws-amplify/storage';
 import { CLIENT_ID, setVoteForPoll } from './utils/localStorageInfo';
-import { onUpdateByID } from './graphql/subscriptions';
-import { getPoll } from './graphql/queries';
-import { upVote } from './graphql/mutations';
+import { onUpdateByID } from './gql/subscriptions';
+import { getPoll } from './gql/queries';
+import { upVote } from './gql/mutations';
 import Candidates from './Candidates';
 import actionTypes from './actionTypes';
 
