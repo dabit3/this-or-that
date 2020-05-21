@@ -40,11 +40,15 @@ $ amplify push --y
 
 4. If using the built in auth mode (IAM), update the [IAM role](#iam-authorization)
 
+### One click deploy
+
+[![amplifybutton](https://oneclick.amplifyapp.com/button.svg)](https://console.aws.amazon.com/amplify/home#/deploy?repo=https://github.com/dabit3/this-or-that)
+
 ## About the app
 
 While the voting API is built with DynamoDB and AppSync, the main functionality really is within a single GraphQL resolver that sends an atomic update to DynamoDB.
 
-This atomic update allows DynamoDB to stay consistent regardless of the other operations that are happening 
+This atomic update allows the DynamoDB table to stay consistent regardless of the number of other operations that are happening.
 
 ### Upvote resolver
 
@@ -75,11 +79,6 @@ __Response mapping template__
 $util.quiet($ctx.result.put("clientId", "$context.arguments.clientId"))
 $util.toJson($ctx.result)
 ```
-
-### One click deploy
-
-[![amplifybutton](https://oneclick.amplifyapp.com/button.svg)](https://console.aws.amazon.com/amplify/home#/deploy?repo=https://github.com/dabit3/this-or-that)
-
 
 ## IAM Authorization
 
