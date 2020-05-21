@@ -24,17 +24,18 @@ $ yarn
 ```sh
 $ amplify init
 
-? Do you want to use an existing environment? N
 ? Enter a name for the environment: dev (or your preferred env name)
-? Choose your default editor: your-preferred-editor
+? Choose your default editor: (your preferred editor)
 ? Do you want to use an AWS profile? Yes
 ? Please choose the profile you want to use: your-profile-name
+
+? Do you want to configure Lambda Triggers for Cognito? No
 ```
 
 3. Deploy the back end
 
 ```sh
-$ amplify push
+$ amplify push --y
 ```
 
 4. If using the built in auth mode (IAM), update the [IAM role](#iam-authorization)
