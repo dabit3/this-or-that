@@ -12,7 +12,7 @@ export default function Candidates({ poll, candidates, onUpVote, simulateUpvotes
   let candidate1;
   let candidate2;
   if (pollView) {
-    /* If this is poll view, create persentages for chart */
+    /* If this is poll view, create percentages for chart */
     totalUpvotes = candidates.reduce((acc, next) => acc + next.upvotes, 0);
     candidate1 = candidates[0].upvotes ? (candidates[0].upvotes / totalUpvotes) * 100 : 0;
     candidate2 = candidates[1].upvotes ? (candidates[1].upvotes / totalUpvotes) * 100 : 0;
