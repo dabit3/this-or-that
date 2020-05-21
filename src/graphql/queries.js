@@ -8,12 +8,7 @@ export const getPoll = /* GraphQL */ `
       name
       type
       candidates {
-        items {
-          id
-          image
-          name
-          upvotes
-        }
+        nextToken
       }
       itemType
       createdAt
@@ -33,14 +28,6 @@ export const listPolls = /* GraphQL */ `
         type
         itemType
         createdAt
-        candidates {
-          items {
-            pollCandidatesId
-            image
-            name
-            upvotes
-          }
-        }
       }
       nextToken
     }
@@ -98,15 +85,6 @@ export const itemsByType = /* GraphQL */ `
         type
         itemType
         createdAt
-        candidates {
-          items {
-            id
-            pollCandidatesId
-            image
-            name
-            upvotes
-          }
-        }
       }
       nextToken
     }
