@@ -2,6 +2,8 @@
 
 Scalable serverless voting app - built with AWS Amplify, AWS AppSync, and Amazon DynamoDB
 
+![This or that](thisorthat.jpg)
+
 ## To deploy
 
 You can deploy this app and the back end infrastructure in one of two ways:
