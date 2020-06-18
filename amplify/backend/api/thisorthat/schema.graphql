@@ -1,5 +1,8 @@
 type Poll @model
-  @key(name: "byItemType", fields: ["itemType", "createdAt"], queryField: "itemsByType") {
+  @key(name: "byItemType", fields: ["itemType", "createdAt"], queryField: "itemsByType")
+  @auth(rules: [
+    { allow: public, operations: [create, read] }
+  ]) {
   id: ID!
   name: String!
   type: PollType!
@@ -8,7 +11,10 @@ type Poll @model
   createdAt: String
 }
 
-type Candidate @model {
+type Candidate @model
+  @auth(rules: [
+    { allow: public, operations: [create, read] }
+  ]) {
   id: ID!
   pollCandidatesId: ID
   image: String
